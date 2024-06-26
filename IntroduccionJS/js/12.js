@@ -16,6 +16,7 @@ tecnologias.forEach(tech => {
 });
 
 console.log("------map----------");
+
 ///map
 ///diferencias entre foreach el map genera un arreglo nuevo
 tecnologias.map(tech => {
