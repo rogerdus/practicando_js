@@ -39,19 +39,19 @@ export async function DELETE(request: Request, { params }: Params) {
         return NextResponse.json(deletedNote);
 
     } catch (error) {
-        if (error instanceof Prisma.PrismaClientKnownRequestError){
+        if (error instanceof Prisma.PrismaClientKnownRequestError) {
             if (error.code === "P2025")
                 return NextResponse.json({ error: "Note not found" }, { status: 404 });
         }
-            return NextResponse.json({ error: error.message }, { status: 500 })
+        return NextResponse.json({ error: error.message }, { status: 500 })
     }
 }
 
 export async function PUT(request: Request, { params }: Params) {
-    try{
+    try {
         const { title, content } = await request.json();
 
-        const updatedNote = await  prisma.note.update({
+        const updatedNote = await prisma.note.update({
             where: {
                 id: Number(params.id)
             },
@@ -63,8 +63,11 @@ export async function PUT(request: Request, { params }: Params) {
 
         return NextResponse.json(updatedNote);
 
-    }catch(error){
-        if (error instanceof Error)
-            return NextResponse.json({ error: error.message }, { status: 500 })
+    } catch (error) {
+        if (error instanceof Prisma.PrismaClientKnownRequestError) {
+            if (error.code === "P2025")
+                return NextResponse.json({ error: "Note not found" }, { status: 404 });
+        }
+        return NextResponse.json({ error: error.message }, { status: 500 })
     }
 }
