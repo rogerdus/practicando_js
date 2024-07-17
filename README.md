@@ -12,7 +12,7 @@
 
  
 
-> *JavaScript is a lightweight scripting languages used in web decelopment dor dynamic formatting content.*
+> *JavaScript is a lightweight scripting languages used in web development for dynamic formatting content.*
 
 >  - Developing Mobile Apps with Near Native Performance
 >  - Front-end Web Development  
