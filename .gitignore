@@ -24,3 +24,41 @@ dist-ssr
 *.sw?
 
 node_modules/*
+next-server-actions-crud/.env
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+next-server-actions-crud/node_modules
+next-server-actions-crud/.pnp
+next-server-actions-crud/.pnp.js
+next-server-actions-crud/.yarn/install-state.gz
+
+# testing
+next-server-actions-crud/coverage
+
+# next.js
+next-server-actions-crud/.next/
+/out/
+
+# production
+next-server-actions-crud/build
+
+# misc
+next-server-actions-crud/.DS_Store
+next-server-actions-crud/*.pem
+
+# debug
+next-server-actions-crud/npm-debug.log*
+next-server-actions-crud/yarn-debug.log*
+next-server-actions-crud/yarn-error.log*
+
+# local env files
+next-server-actions-crud/.env*.local
+
+# vercel
+next-server-actions-crud/.vercel
+
+# typescript
+next-server-actions-crud/*.tsbuildinfo
+next-server-actions-crud/next-env.d.ts
+next-server-actions-crud/prisma/migrations/20240816165517_init/migration.sql
