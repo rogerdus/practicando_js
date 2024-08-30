@@ -1,12 +1,12 @@
 ## **JavaScript essential for begginers**
 
   
-> *This project includes diferents exercise and  examples of javascript *
+> *This project includes diferents exercise and examples of javascript *
 
  - **What is javascript?**
 
 
-> *Is a scripting or programming languajes that allows yo to implement complex features on page web*
+> *Is a scripting or programming languajes that allows you to implement complex features on page web*
 
  - **What can javascript do?**
 
@@ -31,7 +31,7 @@
 - Topics that can will be include
 
 > FRONTEND  In this project i will include apps with React.js
-> 
+> Others frameworks: React js, Vue js, Vanilla,  Next js, etc
 > BACKEND with Express js In this project i will include apps with
-> Express.js
+> Others frameworks: Express.js, Nest Js, 
 
