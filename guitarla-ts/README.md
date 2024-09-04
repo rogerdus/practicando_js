@@ -1,50 +1,60 @@
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ [demo-version](https://66d2287afa7190446d628490--marvelous-pegasus-b3f3b7.netlify.app/)
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [React + TypeScript + Vite](#react--typescript--vite)
+  - [Table of Contents](#table-of-contents)
+  - [Description](#description)
+  - [Features](#features)
+  - [Requirements](#requirements)
+  - [Installation](#installation)
+  - [Contribution](#contribution)
 
-## Expanding the ESLint configuration
+## Description
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+The **GuitarLa** is a project can serve as example with React js and Typescript .
 
-- Configure the top-level `parserOptions` property like this:
+## Features
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+This project has been developed using the **React** framework, ensuring solid and efficient code.
+
+## Requirements
+
+Make sure you have the following requirements before starting the installation:
+
+- [nvm](https://github.com/nvm-sh/nvm) v0.35.3or higher.
+- [Node.js](https://nodejs.org) installed on your system v18.20.
+
+## Installation
+
+Follow these steps to install and set up the project in your local environment:
+
+1. Clone this repository to your local machine and navigate to the project folder.
+
+```bash
+git clone <repository_url>
+cd project-name
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+2. Install JavaScript dependencies and compile assets.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+npm install
+npm run serve
 ```
+
+Great! Now you can access the project in your browser using the address `http://localhost:3000`.
+
+## Contribution
+
+If you'd like to contribute to this project, follow these steps:
+
+1. Fork this repository.
+
+2. Create a branch for your new feature or bug fix.
+
+3. Make your changes and ensure to follow the project's coding guidelines.
+
+4. Submit a pull request detailing your changes for review.
