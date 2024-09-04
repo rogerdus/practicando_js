@@ -1,17 +1,14 @@
-import { useMemo } from 'react'
 ///AQUI SE PUEDEN IMPORTAR COMPONENTES Y LIBRERIAS
 
-export default function Header({ cart, removeFromCart, increaseQuantity, decreaseQuantity, clearCart }) {
+export default function Header({ cart, removeFromCart, increaseQuantity, decreaseQuantity, clearCart,
+    isEmpty, cartTotal
+ }) {
     //AQUI SE HACER FUNCIONES O STATE
     ///// JSX Javascript Syntax Extension
     //// un componente debe tener return
     /// solo retornar un elemento
     /// importar fragment o <>
-
     ///state derivado
-    const isEmpty = useMemo(() => cart.length === 0, [cart]);
-    const cartTotal = useMemo( () => cart.reduce((total, item) => total + (item.quantity * item.price) ,0),[cart])
-
     return (
         <header className="py-5 header">
             <div className="container-xl">
