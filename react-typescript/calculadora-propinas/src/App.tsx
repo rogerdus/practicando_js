@@ -1,7 +1,13 @@
 import MenuItem from "./components/MenuItem";
+import OrderContents from "./components/OrderContents";
+import OrderTotals from "./components/OrderTotals";
+import TipPercentageFor from "./components/TipPercentageFor";
 import { menuItems } from "./data/db";
+import useOrder from "./hooks/useOrder";
 
 function App() {
+  const { order, addItem, removeItem, tip, setTip, placeOrder } = useOrder();
+
   return (
     <>
       <header className="bg-slate-900 py-5">
@@ -15,12 +21,20 @@ function App() {
           <h2 className="text-4xl font-black">Menu</h2>
           <div className="space-y-3 mt-10">
             {menuItems.map((item) => (
-              <MenuItem key={item.id} item={item} />
+              <MenuItem key={item.id} item={item} addItem={addItem} />
             ))}
           </div>
         </div>
-        <div>
-          <h2>Consumo</h2>
+        <div className="border border-dashed border-slate-300 p-5 rounded-lg space-y-10">
+          {order.length ? (
+            <>
+              <OrderContents order={order} removeItem={removeItem} />
+              <TipPercentageFor setTip={setTip} tip={tip} />
+              <OrderTotals order={order} tip={tip} placeOrder={placeOrder} />
+            </>
+          ) : (
+            <p className="text-center">La orden esta vacia</p>
+          )}
         </div>
       </main>
     </>
